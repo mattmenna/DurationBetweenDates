@@ -32,15 +32,22 @@ public class Main {
 
         LocalDate firstdate = LocalDate.of(yearInt, Month.of(monthInt), dayInt);
 
+
         String entry2 = s.nextLine();
-
-
         if (entry2.matches("\\d\\d\\W\\d\\d\\W\\d\\d\\d\\d") == false) {
             System.out.println("Wrong format");
             return;
         }
+        String monthString = entry2.substring(0,1);
+        int monthInt = Integer.valueOf(monthString);
 
+        String dayString = entry2.substring(3,4);
+        int dayInt = Integer.valueOf(monthString);
 
+        String yearString = entry2.substring(6,9);
+        int yearInt = Integer.valueOf(monthString);
+
+        LocalDate secondDate = LocalDate.of(yearInt, Month.of(monthInt), dayInt);
         //LocalDate secondDate = LocalDate.of(year, Month.of(month), daysOfmonth);
 
     /*
