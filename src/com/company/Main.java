@@ -8,11 +8,10 @@ import java.util.Scanner;
 public class Main {
 
     public static void main(String[] args) {
-        // write your code here
 
         System.out.println("Duration Between Dates");
         Scanner s = new Scanner(System.in);
-        System.out.println("Enter the date in Years, Months and Days all numbers");
+        System.out.println("Enter the date in Months/Days/Year format ex. 05/23/2017");
 
         String entry1 = s.nextLine();
 
@@ -26,7 +25,6 @@ public class Main {
         int monthInt = Integer.valueOf(monthString1);
         System.out.println(monthString1);
 
-
         String dayString1 = entry1.substring(3,5);
         int dayInt = Integer.valueOf(dayString1);
 
@@ -35,7 +33,6 @@ public class Main {
         System.out.println(yearString1);
 
         LocalDate firstdate = LocalDate.of(yearInt, Month.of(monthInt), dayInt);
-
 
         String entry2 = s.nextLine();
         if (entry2.matches("\\d\\d\\W\\d\\d\\W\\d\\d\\d\\d") == false) {
