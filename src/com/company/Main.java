@@ -21,14 +21,18 @@ public class Main {
             System.out.println("Wrong format");
             return;
         }
-       String monthString = entry1.substring(0,1);
-        int monthInt = Integer.valueOf(monthString);
 
-        String dayString = entry1.substring(3,4);
-        int dayInt = Integer.valueOf(monthString);
+       String monthString1 = entry1.substring(0,2);
+        int monthInt = Integer.valueOf(monthString1);
+        System.out.println(monthString1);
 
-        String yearString = entry1.substring(6,9);
-        int yearInt = Integer.valueOf(monthString);
+
+        String dayString1 = entry1.substring(3,5);
+        int dayInt = Integer.valueOf(dayString1);
+
+        String yearString1 = entry1.substring(6);
+        int yearInt = Integer.valueOf(yearString1);
+        System.out.println(yearString1);
 
         LocalDate firstdate = LocalDate.of(yearInt, Month.of(monthInt), dayInt);
 
@@ -38,16 +42,18 @@ public class Main {
             System.out.println("Wrong format");
             return;
         }
-        String monthString = entry2.substring(0,1);
-        int monthInt = Integer.valueOf(monthString);
 
-        String dayString = entry2.substring(3,4);
-        int dayInt = Integer.valueOf(monthString);
+        String monthString2 = entry2.substring(0,2);
+        int monthInt2 = Integer.valueOf(monthString2);
 
-        String yearString = entry2.substring(6,9);
-        int yearInt = Integer.valueOf(monthString);
+        String dayString2 = entry2.substring(3,5);
+        int dayInt2 = Integer.valueOf(dayString2);
 
-        LocalDate secondDate = LocalDate.of(yearInt, Month.of(monthInt), dayInt);
+        String yearString2 = entry2.substring(6);
+        int yearInt2 = Integer.valueOf(yearString2);
+
+        LocalDate secondDate = LocalDate.of(yearInt2, Month.of(monthInt2), dayInt2);
+
         //LocalDate secondDate = LocalDate.of(year, Month.of(month), daysOfmonth);
 
     /*
@@ -58,10 +64,10 @@ public class Main {
         LocalDate today = LocalDate.now();
 
         LocalDate tomorrow = LocalDate.of(year, Month.of(month), daysOfmonth);
-
-        Period p = Period.between(today, tomorrow);
+*/
+        Period p = Period.between(firstdate, secondDate);
         System.out.println("Number of Years " + p.getYears() + " Number of Months " + p.getMonths() + " Number of Days " + p.getDays());
-    */
+
 
     }
 }
